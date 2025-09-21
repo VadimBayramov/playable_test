@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
   <head>
-<script>(function(){window.__playable_channel__="Bigo";function __openStore(){if(window.BGY_MRAID&&BGY_MRAID.open){BGY_MRAID.open();return}}window.playableInstall=__openStore;var _open=window.open;window.open=function(){__openStore();return null};window.playableGameReady=function(){try{BGY_MRAID&&BGY_MRAID.gameReady&&BGY_MRAID.gameReady()}catch(e){}};window.playableGameEnd=function(){try{BGY_MRAID&&BGY_MRAID.gameEnd&&BGY_MRAID.gameEnd()}catch(e){}}})();</script>
+<script>(function(){window.playable_channel="Bigo";function __openStore(){console.log("Bigo __openStore called");try{if(window.BGY_MRAID&&BGY_MRAID.open){console.log("Using BGY_MRAID.open");BGY_MRAID.open();return}else{console.log("BGY_MRAID not available:",!!window.BGY_MRAID,!!(window.BGY_MRAID&&BGY_MRAID.open))}}catch(e){console.log("BGY_MRAID.open failed:",e)}console.log("Fallback to window.open");window.open("https://play.google.com/store/apps/details?id=ru.dublgis.dgismobile&hl=ru","_blank")}window.playableInstall=__openStore;var _open=window.open;window.open=function(){__openStore();return null};window.playableGameReady=function(){try{BGY_MRAID&&BGY_MRAID.gameReady&&BGY_MRAID.gameReady()}catch(e){}};window.playableGameEnd=function(){try{BGY_MRAID&&BGY_MRAID.gameEnd&&BGY_MRAID.gameEnd()}catch(e){}}})();</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <title>2ГИС — Зелёная волна</title>
@@ -4046,7 +4046,7 @@ void main() {
           </div>
           <div class="title">Светофоры в реальном времени в приложении 2ГИС!</div>
           <div class="subtitle" id="resultText">Ваше время: 0.0 сек. Попаданий на зелёный: 0</div>
-          <a class="cta" href="https://2gis.ru" target="_blank" rel="noreferrer">Скачать 2ГИС</a>
+          <a class="cta" href="#" onclick="event.preventDefault(); console.log('Bigo CTA clicked!'); if(window.playableInstall) { console.log('Calling Bigo playableInstall...'); window.playableInstall(); } else { console.log('Bigo playableInstall not found'); } return false;" rel="noreferrer">Скачать 2ГИС</a>
         </div>
       </div>
     </div>
